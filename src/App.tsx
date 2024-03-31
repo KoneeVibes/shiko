@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import { Container } from '@mui/material';
 import { Header } from './containers/header';
+import { Services } from './containers/services';
+import { About } from './containers/about';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       }}
     >
       <Header />
+      <Services />
+      <About />
     </Container>
   );
 }

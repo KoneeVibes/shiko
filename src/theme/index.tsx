@@ -42,6 +42,11 @@ export const theme = createTheme({
             whiteSpace: "nowrap",
             textOverflow: "ellipsis",
         },
+        h4: {
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+        },
         body1: {
             overflow: "hidden",
             whiteSpace: "nowrap",
