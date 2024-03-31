@@ -10,7 +10,7 @@ export const Header: React.FC<{}> = () => {
                 backgroundImage: `url(${headerBg})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
-                backgroundPosition: { mobile: "top left", tablet: "top right"},
+                backgroundPosition: { mobile: "top left", tablet: "bottom right" },
             }}
         >
             <Navbar />
