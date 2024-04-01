@@ -8,6 +8,7 @@ import { Growth } from './containers/growth';
 import { Capabilities } from './containers/capabilities';
 import { Calendly } from './containers/calendly';
 import { Contact } from './containers/contact';
+import { Form } from './containers/form';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Capabilities />
       <Calendly />
       <Contact />
+      <Form />
     </Container>
   );
 }

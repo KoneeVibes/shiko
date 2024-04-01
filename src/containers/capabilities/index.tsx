@@ -1,8 +1,6 @@
-import { Card, CardActions, CardContent, Stack, Typography } from "@mui/material";
+import { Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import { capabilities } from "../../data";
 import { CapabilitiesBox } from "./styled";
-import { BaseButton } from "../../components/buttons";
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export const Capabilities: React.FC<{}> = () => {
     return (
@@ -22,84 +20,96 @@ export const Capabilities: React.FC<{}> = () => {
                 lineHeight={"normal"}
                 color={"#FFFFFF"}
                 marginBlockEnd={"2rem"}
+                whiteSpace={"normal"}
             >
                 Subsea Capabilities
             </Typography>
-            <Stack
-                direction={{ laptop: "row" }}
+            <Typography
+                variant="body1"
+                fontFamily={"Inter"}
+                fontWeight={400}
+                fontSize={14}
+                lineHeight={"normal"}
+                color={"#FFFFFFC4"}
+                marginBlockEnd={"3rem"}
+                whiteSpace={"normal"}
+            >
+                Shiko LZ global network and consortium of deepwater subsea companies enable us to deliver world-class EPCI (Engineering, Procurement, construction and Installation) of deepwater Subsea Structures, Umbilical, Riser, and Flowline (SURF) systems and Life-of-Field projects.
+            </Typography>
+            <Grid
+                container
                 gap={"var(--flexGap)"}
                 justifyContent={"space-between"}
             >
                 {capabilities.map((capability, key) => {
                     return (
-                        <Card
+                        <Grid
+                            item
                             key={key}
-                            sx={{
-                                backgroundColor: "#162B9C",
-                                borderRadius: "12px",
-                                display: "flex",
-                                flexDirection: "column",
-                                justifyContent: "space-between",
-                                "&:hover": {
-                                    backgroundColor: "#7A8FFF",
-                                }
-                            }}
+                            mobile={12}
+                            tablet={5.6}
+                            laptop={3.6}
                         >
-                            <CardContent
+                            <Card
                                 sx={{
-                                    padding: "2rem"
+                                    backgroundColor: "#162B9C",
+                                    borderRadius: "12px",
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    height: "100%",
+                                    "&:hover": {
+                                        backgroundColor: "#7A8FFF",
+                                    }
                                 }}
                             >
-                                <Typography
-                                    variant="h3"
-                                    fontFamily={"Helvetica Neue"}
-                                    fontWeight={500}
-                                    fontSize={{ mobile: 25, miniTablet: 30 }}
-                                    lineHeight={"normal"}
-                                    color={"#FFFFFF"}
-                                    marginBlockEnd={"2rem"}
-                                    whiteSpace={"normal"}
+                                <CardHeader
+                                    avatar={capability.img}
+                                    title={
+                                        <Typography
+                                            variant="h3"
+                                            fontFamily={"Helvetica Neue"}
+                                            fontWeight={500}
+                                            fontSize={{ mobile: 25, miniTablet: 30 }}
+                                            lineHeight={"normal"}
+                                            color={"#FFFFFF"}
+                                            whiteSpace={"normal"}
+                                        >
+                                            {capability.title}
+                                        </Typography>
+                                    }
+                                    sx={{
+                                        padding: "2rem",
+                                        flexDirection: "column",
+                                        gap: "1rem",
+                                        alignItems: "stretch",
+                                        "& .MuiCardHeader-content": {
+                                            width: "100%",
+                                            overflow: "hidden",
+                                        }
+                                    }}
+                                />
+                                <CardContent
+                                    sx={{
+                                        padding: "2rem"
+                                    }}
                                 >
-                                    {capability.title}
-                                </Typography>
-                                <ul>
-                                    {capability.items.map((item, key) => {
-                                        return (
-                                            <li
-                                                key={key}
-                                            >
-                                                {item}
-                                            </li>
-                                        )
-                                    })}
-                                </ul>
-                            </CardContent>
-                            <CardActions
-                                sx={{
-                                    padding: "4rem 2rem"
-                                }}
-                            >
-                                <BaseButton
-                                    isiconbutton={"true"}
-                                    endIcon={<ArrowOutwardIcon />}
-                                >
-                                    <Typography
-                                        variant="button"
-                                        fontFamily={"inherit"}
-                                        fontWeight={"inherit"}
-                                        fontSize={"inherit"}
-                                        lineHeight={"inherit"}
-                                        color={"inherit"}
-                                        textTransform={"inherit"}
-                                    >
-                                        More info
-                                    </Typography>
-                                </BaseButton>
-                            </CardActions>
-                        </Card>
+                                    <ul>
+                                        {capability.items.map((item, key) => {
+                                            return (
+                                                <li
+                                                    key={key}
+                                                >
+                                                    {item}
+                                                </li>
+                                            )
+                                        })}
+                                    </ul>
+                                </CardContent>
+                            </Card>
+                        </Grid>
                     )
                 })}
-            </Stack>
+            </Grid>
         </CapabilitiesBox>
     )
 }

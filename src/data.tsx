@@ -1,3 +1,4 @@
+import { Architecture, Construction, Equipment, Pipelines, Subsea } from "./assets";
 import procurement from "./assets/procurement.svg";
 
 export const navLinks = [
@@ -53,21 +54,45 @@ export const growth = {
 
 export const capabilities = [
     {
+        img: <Pipelines />,
         title: "Pipelines & Risers Design",
         items: [
             "Strength design", "Hydraulic and thermal sizing", "Material selection", "Corrosion protection", "On-bottom stability", "Mechanical protection", "Free-span studies", "Dynamic analysis", "Pipelines requalification"
         ]
     },
     {
+        img: <Subsea />,
         title: "Subsea Structures Design",
         items: [
-            "Structural design", "Foundation design", "Corrosion protection", "Mechanical protection", "ROV interfaces", 
+            "Structural design", "Foundation design", "Corrosion protection", "Mechanical protection", "ROV interfaces",
         ]
     },
     {
+        img: <Architecture />,
         title: "Field Architectural Screening",
         items: [
             "Field general arrangement and", "Subsea layout including subsea", "process", "Pipe routing integrating", "thermal, hydraulic and", "operating constraints", "Production network concept", "including riser & flowline", "conceptual design"
         ]
     },
-]
+    {
+        img: <Subsea />,
+        title: "Subsea Systems Engineering",
+        items: [
+            "Design of Flowline/Pipeline, Risers, Subsea Structures & Component § Flow Assurance & Operability", "Control Systems & Umbilical Specification", "Route Selection", "Cost Estimating, Scheduling, Specifications, SoW & Bid Packages"
+        ]
+    },
+    {
+        img: <Equipment />,
+        title: "Equipment Solutions",
+        items: [
+            "Design, manufacture and sale of subsea equipment and component including Structures, Manifolds, Umbilicals, Risers, Flowlines, Turret & Mooring Systems",
+        ]
+    },
+    {
+        img: <Construction />,
+        title: "Construction & Installation",
+        items: [
+            " We leverage our partners’ fleet of SURF installation specialist vessels, high specification ROVs and trenching systems."
+        ]
+    },
+];
