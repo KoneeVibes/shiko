@@ -4,6 +4,8 @@ import { Container } from '@mui/material';
 import { Header } from './containers/header';
 import { Services } from './containers/services';
 import { About } from './containers/about';
+import { Growth } from './containers/growth';
+import { Capabilities } from './containers/capabilities';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Header />
       <Services />
       <About />
+      <Growth />
+      <Capabilities />
     </Container>
   );
 }

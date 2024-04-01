@@ -4,8 +4,10 @@ import { services } from "../../data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 export const Services: React.FC<{}> = () => {
+    const matches = useMediaQuery('(min-width:1024px)');
     return (
         <ServicesBox>
             <Typography
@@ -26,7 +28,7 @@ export const Services: React.FC<{}> = () => {
                 stopOnHover={false}
                 infiniteLoop={true}
                 interval={2000}
-                emulateTouch={true}
+                emulateTouch={matches && true}
                 showThumbs={false}
                 showArrows={false}
                 showStatus={false}

@@ -39,11 +39,11 @@ export const About: React.FC<{}> = () => {
                     whiteSpace={"normal"}
                 >
                     We at Shiko LZ Subsea are specialist of innovative instruments, services and solutions for measurement, monitoring and communication underwater.
-                    We provide solutions for all water environments, including offshore structures and pipelines, oceans, estuaries, rivers and marine. <br /><p style={{ height: "0.5rem" }}></p>
+                    We provide solutions for all water environments, including offshore structures and pipelines, oceans, estuaries, rivers and marine. <br /><span style={{ display: "block", height: "2rem" }}></span>
 
-                    We work with the best industry design equipment to withstand deep-water environments, extreme sea withstand deep-water environments, extreme sea states and heavy-duty loading. <br /> <p style={{ height: "0.5rem" }}></p>
+                    We work with the best industry design equipment to withstand deep-water environments, extreme sea withstand deep-water environments, extreme sea states and heavy-duty loading. <br /><span style={{ display: "block", height: "2rem" }}></span>
 
-                    We carry out engineering in line with the most stringent maritime and industrial standards to ensure continuous safe and reliable operation. <br /> <p style={{ height: "0.5rem" }}></p>
+                    We carry out engineering in line with the most stringent maritime and industrial standards to ensure continuous safe and reliable operation. <br /><span style={{ display: "block", height: "2rem" }}></span>
 
                     Our capabilities extend from pipeline, jumpers and risers design to dedicated installation aids or more complex subsea structures design including Flow Assurance typically during conceptual / pre-FEED engineering and during life of field on maintenance & repair jobs.
                 </Typography>
