@@ -6,6 +6,8 @@ import { Services } from './containers/services';
 import { About } from './containers/about';
 import { Growth } from './containers/growth';
 import { Capabilities } from './containers/capabilities';
+import { Calendly } from './containers/calendly';
+import { Contact } from './containers/contact';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <About />
       <Growth />
       <Capabilities />
+      <Calendly />
+      <Contact />
     </Container>
   );
 }
