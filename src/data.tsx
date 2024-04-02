@@ -97,4 +97,11 @@ export const capabilities = [
     },
 ];
 
-export const smIcons = [<Facebook />, <Instagram />, <Tiktok />]
+export const smIcons = [<Facebook />, <Instagram />, <Tiktok />];
+
+export const contactInfo = {
+    Email: "info@slzltd.com",
+    Tel: " +23408027590356, +23409027219196",
+    UK: "+4407484811190",
+    Fax: "123-456-7890"
+}

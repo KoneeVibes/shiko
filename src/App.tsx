@@ -27,7 +27,6 @@ function App() {
       <Calendly />
       <Contact />
       <Form />
-      {/* <hr /> */}
       <Footer />
     </Container>
   );

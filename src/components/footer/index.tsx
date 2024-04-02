@@ -1,6 +1,7 @@
 import React from "react";
 import { smIcons } from "../../data";
 import { Box, Stack, Typography } from "@mui/material";
+import { contactInfo } from "../../data";
 
 export const Footer: React.FC<{}> = () => {
     return (
@@ -16,12 +17,14 @@ export const Footer: React.FC<{}> = () => {
                 lineHeight={"normal"}
                 color={"#1E2D3B"}
                 marginBlockEnd={"2rem"}
+                whiteSpace={"normal"}
             >
                 Follow us on Social Media
             </Typography>
             <Stack
                 direction={"row"}
                 gap={"calc(var(--flexGap) / 2)"}
+                overflow={"hidden"}
             >
                 {smIcons.map((icon, key) => {
                     return (
@@ -32,7 +35,8 @@ export const Footer: React.FC<{}> = () => {
                 })}
             </Stack>
             <Stack
-                direction={"row"}
+                direction={{ laptop: "row" }}
+                gap={{ mobile: "var(--flexGap)", laptop: "calc(2 * var(--flexGap))" }}
                 padding={"var(--sectionMargin) 0"}
             >
                 <Box>
@@ -62,6 +66,60 @@ export const Footer: React.FC<{}> = () => {
                         to: info@shikolzltd.com
                     </Typography>
                 </Box>
+                <Box>
+                    <Typography
+                        variant="h3"
+                        fontFamily={"Helvetica Neue"}
+                        fontWeight={500}
+                        fontSize={24}
+                        lineHeight={"normal"}
+                        color={"#324158"}
+                        whiteSpace={"normal"}
+                        marginBlockEnd={"1rem"}
+                    >
+                        Office
+                    </Typography>
+                    <Typography
+                        variant="body1"
+                        fontFamily={"Helvetica Neue"}
+                        fontWeight={400}
+                        fontSize={16}
+                        lineHeight={"normal"}
+                        color={"#3B3A3A"}
+                        whiteSpace={"normal"}
+                    >
+                        1-7 Muri Okonla Street,
+                        Victoria Island
+                        Lagos
+                    </Typography>
+                </Box>
+                <Stack>
+                    {Object.entries(contactInfo).map((info, index) => {
+                        return (
+                            <Typography
+                                key={index}
+                                variant="body1"
+                                fontFamily={"Helvetica Neue"}
+                                fontWeight={400}
+                                fontSize={16}
+                                lineHeight={"normal"}
+                                color={"#3B3A3A"}
+                                whiteSpace={"normal"}
+                            >
+                                {info.map((detail, k) => {
+                                    return (
+                                        <Typography
+                                            key={k}
+                                            component={"span"}
+                                        >
+                                            {`${detail}:  `}
+                                        </Typography>
+                                    );
+                                })}
+                            </Typography>
+                        );
+                    })}
+                </Stack>
             </Stack>
         </Box>
     )
