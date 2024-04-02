@@ -1,5 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { growth } from "../../data";
+// import CountUp from 'react-countup';
 
 export const Growth: React.FC<{}> = () => {
     return (

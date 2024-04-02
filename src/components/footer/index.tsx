@@ -63,7 +63,7 @@ export const Footer: React.FC<{}> = () => {
                     >
                         To apply for a job with Shiko LZ, please
                         send a cover letter together with your C.V.
-                        to: info@shikolzltd.com
+                        to: info@slzltd.com
                     </Typography>
                 </Box>
                 <Box>
@@ -112,7 +112,7 @@ export const Footer: React.FC<{}> = () => {
                                             key={k}
                                             component={"span"}
                                         >
-                                            {`${detail}:  `}
+                                            {`${detail}  `}
                                         </Typography>
                                     );
                                 })}

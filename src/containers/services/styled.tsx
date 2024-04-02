@@ -1,6 +1,6 @@
-import { Box, styled } from "@mui/material";
+import { Box, BoxProps, styled } from "@mui/material";
 
-export const ServicesBox: React.FC<{ children: React.ReactNode }> = styled(Box)(
+export const ServicesBox: React.FC<{ children: React.ReactNode } & Omit<BoxProps, keyof { children: React.ReactNode }>> = styled(Box)(
     ({ theme }) => {
         return {
             padding: "var(--sectionMargin) var(--pagePadding) calc(1.5 * var(--sectionMargin))",

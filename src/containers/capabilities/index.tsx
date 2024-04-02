@@ -5,6 +5,7 @@ import { CapabilitiesBox } from "./styled";
 export const Capabilities: React.FC<{}> = () => {
     return (
         <CapabilitiesBox
+            id="capabilities"
             padding={"var(--sectionMargin)"}
             margin={"0 var(--pagePadding)"}
             sx={{

@@ -37,6 +37,7 @@ export const Navbar: React.FC<{}> = () => {
                         >
                             <HashLink
                                 to={link.url}
+                                smooth={true}
                             >
                                 <Typography
                                     variant="subtitle1"

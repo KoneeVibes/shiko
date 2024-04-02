@@ -3,6 +3,8 @@ import { Stack, Typography } from "@mui/material"
 export const Contact: React.FC<{}> = () => {
     return (
         <Stack
+            id="contact"
+            component={"div"}
             padding={{ mobile: "0 var(--pagePadding) var(--sectionMargin)", laptop: "var(--sectionMargin) var(--pagePadding) calc(2 * var(--sectionMargin))" }}
         >
             <Typography
@@ -19,7 +21,7 @@ export const Contact: React.FC<{}> = () => {
             </Typography>
             <iframe
                 title="location of firm"
-                src="https://www.google.com/maps/embed/v1/place?q=Focus+Group+Limited,+Fola+Osibo+Road,+Lekki,+Nigeria&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                src="https://www.google.com/maps/embed/v1/place?q=1-7+Muri+Okonla+Street,+Victoria+Island+Lagos&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
                 style={{
                     borderRadius: "14px",
                     minHeight: 365

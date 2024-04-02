@@ -1,10 +1,13 @@
 import { Card, CardContent, Typography } from "@mui/material";
 import { InlineWidget } from "react-calendly";
 import { CalendlyStack } from "./styled";
+import { CalendlyRef } from "../../types/app.type";
 
-export const Calendly: React.FC<{}> = () => {
+export const Calendly: React.FC<CalendlyRef> = ({ calendlyRef }) => {
     return (
         <CalendlyStack
+            ref={calendlyRef}
+            component={"div"}
             direction={{ laptop: "row" }}
             margin={"calc(2 * var(--sectionMargin)) 0"}
             gap={{ mobile: "var(--flexGap)", laptop: "calc(2 * var(--flexGap))" }}
@@ -47,7 +50,7 @@ export const Calendly: React.FC<{}> = () => {
                         whiteSpace={"normal"}
                     >
                         By the end of this audit call, you will have a clear understanding of the next steps you can take for your business to build and scale a human-centric product . <br /><span style={{ display: "block", height: "2rem" }}></span>
-                        Find a time on Brp (our Executive Assistance) calendar to schedule your call today and we look forward to speaking to you soon!
+                        Find a time on Shiko (our Executive Assistance) calendar to schedule your call today and we look forward to speaking to you soon!
                     </Typography>
                 </CardContent>
             </Card>

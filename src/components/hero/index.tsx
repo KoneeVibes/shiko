@@ -1,7 +1,8 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { BaseButton } from "../buttons";
+import { CalendlyRef } from "../../types/app.type";
 
-export const Hero: React.FC<{}> = () => {
+export const Hero: React.FC<CalendlyRef> = ({ calendlyRef }) => {
     return (
         <Box
             padding={{ mobile: "var(--sectionMargin) var(--pagePadding) calc(2* var(--sectionMargin))", tablet: "calc(2* var(--sectionMargin)) var(--pagePadding)" }}
@@ -44,6 +45,7 @@ export const Hero: React.FC<{}> = () => {
                     sx={{
                         width: { mobile: "100%", miniTablet: "fit-content" },
                     }}
+                    onClick={() => calendlyRef?.current?.scrollIntoView({ behavior: "smooth" })}
                 >
                     <Typography
                         variant="button"

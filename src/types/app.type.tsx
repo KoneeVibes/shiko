@@ -5,5 +5,9 @@ export type BaseButtonProps = {
 }
 
 export type CalendlyStackType = {
-    children: React.ReactNode
+    children: React.ReactNode,
+}
+
+export type CalendlyRef = {
+    calendlyRef: React.RefObject<HTMLDivElement>
 }

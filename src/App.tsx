@@ -1,4 +1,4 @@
-import React from 'react';
+import { useRef } from 'react';
 import './App.css';
 import { Container } from '@mui/material';
 import { Header } from './containers/header';
@@ -12,6 +12,7 @@ import { Form } from './containers/form';
 import { Footer } from './components/footer';
 
 function App() {
+  const calendlyRef = useRef(null);
   return (
     <Container
       maxWidth={false}
@@ -19,12 +20,12 @@ function App() {
         padding: "0 !important",
       }}
     >
-      <Header />
+      <Header calendlyRef={calendlyRef} />
       <Services />
       <About />
       <Growth />
       <Capabilities />
-      <Calendly />
+      <Calendly calendlyRef={calendlyRef}/>
       <Contact />
       <Form />
       <Footer />

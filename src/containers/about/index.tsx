@@ -4,6 +4,8 @@ import about from "../../assets/about.svg";
 export const About: React.FC<{}> = () => {
     return (
         <Stack
+            id="about"
+            component={"div"}
             direction={{ tablet: "row" }}
         >
             <Card

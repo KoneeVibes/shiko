@@ -9,7 +9,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 export const Services: React.FC<{}> = () => {
     const matches = useMediaQuery('(min-width:1024px)');
     return (
-        <ServicesBox>
+        <ServicesBox
+            id="services"
+        >
             <Typography
                 variant="h2"
                 fontFamily={"Helvetica Neue"}
