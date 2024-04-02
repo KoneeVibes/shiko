@@ -3,13 +3,13 @@ import { Stack, Typography } from "@mui/material"
 export const Contact: React.FC<{}> = () => {
     return (
         <Stack
-            padding={{ mobile: "0 var(--pagePadding) calc(2 * var(--sectionMargin))", laptop: "var(--sectionMargin) var(--pagePadding) calc(2 * var(--sectionMargin))" }}
+            padding={{ mobile: "0 var(--pagePadding) var(--sectionMargin)", laptop: "var(--sectionMargin) var(--pagePadding) calc(2 * var(--sectionMargin))" }}
         >
             <Typography
                 variant="h2"
                 fontFamily={"Helvetica Neue"}
                 fontWeight={500}
-                fontSize={{ mobile: 35, tablet: 40 }}
+                fontSize={{ mobile: 30, tablet: 40 }}
                 lineHeight={"normal"}
                 color={"#01126E"}
                 textAlign={"center"}

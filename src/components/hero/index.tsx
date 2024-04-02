@@ -47,6 +47,12 @@ export const Hero: React.FC<{}> = () => {
                 >
                     <Typography
                         variant="button"
+                        fontFamily={"inherit"}
+                        fontWeight={"inherit"}
+                        fontSize={"inherit"}
+                        lineHeight={"inherit"}
+                        color={"inherit"}
+                        textTransform={"inherit"}
                     >
                         Work with us
                     </Typography>

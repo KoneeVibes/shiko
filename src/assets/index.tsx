@@ -4,3 +4,6 @@ export { ReactComponent as Construction } from "./construction.svg";
 export { ReactComponent as Equipment } from "./equipment.svg";
 export { ReactComponent as Pipelines } from "./pipelines.svg";
 export { ReactComponent as Subsea } from "./subsea.svg";
+export { ReactComponent as Facebook } from "./facebook.svg";
+export { ReactComponent as Instagram } from "./instagram.svg";
+export { ReactComponent as Tiktok } from "./tiktok.svg";

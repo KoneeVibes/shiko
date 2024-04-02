@@ -1,7 +1,7 @@
 import React from "react"
 
 export type BaseButtonProps = {
-    isiconbutton?: string
+    submitformbutton?: string
 }
 
 export type CalendlyStackType = {

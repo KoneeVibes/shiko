@@ -9,6 +9,7 @@ import { Capabilities } from './containers/capabilities';
 import { Calendly } from './containers/calendly';
 import { Contact } from './containers/contact';
 import { Form } from './containers/form';
+import { Footer } from './components/footer';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
       <Calendly />
       <Contact />
       <Form />
+      {/* <hr /> */}
+      <Footer />
     </Container>
   );
 }

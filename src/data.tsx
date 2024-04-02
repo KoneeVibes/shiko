@@ -1,4 +1,4 @@
-import { Architecture, Construction, Equipment, Pipelines, Subsea } from "./assets";
+import { Architecture, Construction, Equipment, Facebook, Instagram, Pipelines, Subsea, Tiktok } from "./assets";
 import procurement from "./assets/procurement.svg";
 
 export const navLinks = [
@@ -96,3 +96,5 @@ export const capabilities = [
         ]
     },
 ];
+
+export const smIcons = [<Facebook />, <Instagram />, <Tiktok />]
