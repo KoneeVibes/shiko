@@ -4,6 +4,22 @@ import { CalendlyStack } from "./styled";
 import { CalendlyRef } from "../../types/app.type";
 
 export const Calendly: React.FC<CalendlyRef> = ({ calendlyRef }) => {
+    const URL = process.env.REACT_APP_CALENDLY;
+    if (!URL) {
+        return (
+            <Typography
+                variant="body1"
+                fontFamily={"Helvetica Neue"}
+                fontWeight={400}
+                fontSize={18}
+                lineHeight={"normal"}
+                color={"#525252"}
+                whiteSpace={"normal"}
+            >
+                Unavailable
+            </Typography>
+        );
+    }
     return (
         <CalendlyStack
             ref={calendlyRef}
@@ -62,7 +78,7 @@ export const Calendly: React.FC<CalendlyRef> = ({ calendlyRef }) => {
                 }}
             >
                 <InlineWidget
-                    url="https://calendly.com/heath-brp/30min"
+                    url={URL}
                     pageSettings={{
                         backgroundColor: 'none',
                         primaryColor: '#004FCA',

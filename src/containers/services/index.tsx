@@ -30,7 +30,7 @@ export const Services: React.FC<{}> = () => {
                 stopOnHover={false}
                 infiniteLoop={true}
                 interval={2000}
-                emulateTouch={matches && true}
+                emulateTouch={matches ? true : false}
                 showThumbs={false}
                 showArrows={false}
                 showStatus={false}
@@ -74,20 +74,22 @@ export const Services: React.FC<{}> = () => {
                             direction={{ tablet: "row" }}
                             gap={"var(--flexGap)"}
                             justifyContent={"space-between"}
+                            height={"100%"}
                         >
                             <Card
                                 sx={{
-                                    flex: 1,
+                                    flex: { tablet: 1 },
                                     borderRadius: "10px",
                                     boxShadow: "none"
                                 }}
                             >
                                 <CardMedia
-                                    component={"img"}
-                                    src={service.thumbnail}
+                                    image={service.thumbnail}
                                     sx={{
                                         borderRadius: "inherit",
                                         height: "100%",
+                                        backgroundPosition: service.position,
+                                        minHeight: "24.75rem"
                                     }}
                                 />
                             </Card>
@@ -97,7 +99,8 @@ export const Services: React.FC<{}> = () => {
                                     borderRadius: "10px",
                                     boxShadow: "none",
                                     background: "#D6DCFF",
-                                    padding: "calc(1.5 * var(--sectionMargin)) var(--sectionMargin)"
+                                    padding: "calc(1.5 * var(--sectionMargin)) var(--sectionMargin)",
+                                    height: "100%"
                                 }}
                             >
                                 <CardContent

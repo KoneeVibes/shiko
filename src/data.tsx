@@ -32,18 +32,21 @@ export const services = [
         url: "#",
         body: "Working on field development either directly with project engineers or via the design contractor. Complete process from negotiation and award to shipping and submission of final document. Supply Market analysis, Technical Specification Writing, Management of tender Processes and evaluation of proposals, procurement planning and management, Logistics Management etc",
         thumbnail: specialized,
+        position: "top left"
     },
     {
         name: "Engineering Services",
         url: "#",
         body: "High and Low Pressure Leak Repairs- Flow lines, Pipelines and Storage Tanks Corrosion Control, Reinforcements-mechanical damage, corrosion damage, dents etc. Painting Steel and Concrete Fence Installations  Hoist Installation, Building Refurbishment/Construction Telecommunication tower construction, Swamp Clearing Steel fabrication and Installation Minor and Major Civil Works. We provide innovative and cost saving repair and maintenance services to whatsoever Equipment/ Machinery / Facility that needs our expertise.",
         thumbnail: engineering,
+        position: "top center"
     },
     {
         name: "Procurement",
         url: "#",
         body: "Our procurement services are carried out by professional solutions providers, who provide effective sourcing solutions. We're able to understand technical specifications, and deliver on time. We have experience with sourcing Global materials for safety equipment, tubes, pipes and fittings, electrical and mechanical equipment, compressors, turbines, and more. Our procurement team can get you the equipment you need, when you need it",
         thumbnail: procurement,
+        position: "top left"
     },
 ];
 

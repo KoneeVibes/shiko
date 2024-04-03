@@ -1,6 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { growth } from "../../data";
-// import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 
 export const Growth: React.FC<{}> = () => {
     return (
@@ -8,7 +8,7 @@ export const Growth: React.FC<{}> = () => {
             direction={{ tablet: "row" }}
             justifyContent={"space-between"}
             alignItems={"center"}
-            gap={{ mobile: "calc(var(--flexGap)/2)", tablet: "calc(2 * var(--flexGap))", laptop: "calc(4 * var(--flexGap))" }}
+            gap={{ mobile: "calc(var(--flexGap)/2)", tablet: "calc(2.5 * var(--flexGap))", laptop: "calc(4 * var(--flexGap))" }}
             padding={{ mobile: "var(--sectionMargin) var(--pagePadding)", tablet: "calc(2 * var(--sectionMargin)) calc(1.5 * var(--pagePadding))" }}
         >
             <Box
@@ -40,7 +40,7 @@ export const Growth: React.FC<{}> = () => {
             </Box>
             <Grid
                 container
-                gap={"var(--flexGap)"}
+                gap={{ mobile: "calc(var(--flexGap)/4)", tablet: "var(--flexGap)" }}
                 justifyContent={{ mobile: "space-between", laptop: "flex-end" }}
             >
                 {Object.entries(growth).map((data, key) => {
@@ -48,18 +48,27 @@ export const Growth: React.FC<{}> = () => {
                         <Grid
                             item
                             key={key}
-                            mobile={4}
+                            mobile={12}
+                            tablet={5}
                         >
-                            <Typography
-                                variant="h3"
-                                fontFamily={"Helvetica Neue"}
-                                fontWeight={500}
-                                fontSize={{ mobile: 25, tablet: 40, laptop: 45, desktop: 50 }}
-                                lineHeight={"normal"}
-                                color={"#060606"}
+                            <CountUp
+                                end={data[1]}
+                                enableScrollSpy={true}
                             >
-                                {data[1]}
-                            </Typography>
+                                {({ countUpRef }) => (
+                                    <Typography
+                                        ref={countUpRef}
+                                        variant="h3"
+                                        fontFamily={"Helvetica Neue"}
+                                        fontWeight={500}
+                                        fontSize={{ mobile: 25, tablet: 40, laptop: 45, desktop: 50 }}
+                                        lineHeight={"normal"}
+                                        color={"#060606"}
+                                    >
+                                        {data[1]}
+                                    </Typography>
+                                )}
+                            </CountUp>
                             <Typography
                                 variant="body1"
                                 component={"p"}
