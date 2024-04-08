@@ -5,7 +5,7 @@ import { contactInfo } from "../../data";
 
 export const Footer: React.FC<{}> = () => {
     return (
-        <Box
+        <Stack
             borderTop={".5px solid #A9A9A9"}
             padding={"var(--sectionMargin) var(--pagePadding)"}
         >
@@ -13,10 +13,10 @@ export const Footer: React.FC<{}> = () => {
                 variant="h2"
                 fontFamily={"Helvetica Neue"}
                 fontWeight={500}
-                fontSize={25}
+                fontSize={24}
                 lineHeight={"normal"}
                 color={"#1E2D3B"}
-                marginBlockEnd={"2rem"}
+                marginBlockEnd={"1rem"}
                 whiteSpace={"normal"}
             >
                 Follow us on Social Media
@@ -121,6 +121,6 @@ export const Footer: React.FC<{}> = () => {
                     })}
                 </Stack>
             </Stack>
-        </Box>
+        </Stack>
     )
 }

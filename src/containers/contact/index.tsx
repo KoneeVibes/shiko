@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material"
+import { Stack, Typography } from "@mui/material";
 
 export const Contact: React.FC<{}> = () => {
     return (
@@ -12,12 +12,17 @@ export const Contact: React.FC<{}> = () => {
                 fontFamily={"Helvetica Neue"}
                 fontWeight={500}
                 fontSize={{ mobile: 30, tablet: 40 }}
-                lineHeight={"normal"}
+                lineHeight={1.5}
                 color={"#01126E"}
                 textAlign={"center"}
                 marginBlockEnd={"2rem"}
             >
-                Contact us
+                <span style={{
+                    textDecoration: "underline 4px solid #EDCD1F",
+                    textUnderlineOffset: "5px",
+                }}>
+                    Contact
+                </span> us
             </Typography>
             <iframe
                 title="location of firm"
@@ -28,6 +33,6 @@ export const Contact: React.FC<{}> = () => {
                 }}
             >
             </iframe>
-        </Stack>
+        </Stack >
     )
 }

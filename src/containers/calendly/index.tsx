@@ -25,7 +25,7 @@ export const Calendly: React.FC<CalendlyRef> = ({ calendlyRef }) => {
             ref={calendlyRef}
             component={"div"}
             direction={{ laptop: "row" }}
-            margin={"calc(2 * var(--sectionMargin)) 0"}
+            margin={"calc(2 * var(--sectionMargin)) 0 var(--sectionMargin)"}
             gap={{ mobile: "var(--flexGap)", laptop: "calc(2 * var(--flexGap))" }}
             padding={{ mobile: "calc(1.5 * var(--sectionMargin)) var(--pagePadding)", laptop: "calc(2 * var(--sectionMargin)) var(--pagePadding)" }}
             sx={{

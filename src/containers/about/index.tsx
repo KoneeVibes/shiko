@@ -1,5 +1,6 @@
-import { Card, CardMedia, Stack, Typography } from "@mui/material";
+import { Box, Card, CardMedia, Stack, Typography } from "@mui/material";
 import about from "../../assets/about.svg";
+import { theme } from "../../theme";
 
 export const About: React.FC<{}> = () => {
     return (
@@ -17,20 +18,33 @@ export const About: React.FC<{}> = () => {
                     padding: "calc(2* var(--sectionMargin)) var(--pagePadding)",
                 }}
             >
-                <Typography
-                    variant="h2"
-                    fontFamily={"Helvetica Neue"}
-                    fontWeight={500}
-                    fontSize={{ mobile: 30, tablet: 40 }}
-                    lineHeight={"normal"}
-                    color={"#FFFFFF"}
+                <Box
+                    maxWidth={{ mobile: 60, tablet: 70 }}
+                    borderBottom={"4px solid #EDCD1F"}
                     marginBlockEnd={"2rem"}
                     sx={{
-                        textDecoration: "underline"
+                        [theme.breakpoints.down(125)]: {
+                            maxWidth: "unset",
+                        }
                     }}
                 >
-                    About
-                </Typography>
+                    <Typography
+                        variant="h2"
+                        fontFamily={"Helvetica Neue"}
+                        fontWeight={500}
+                        fontSize={{ mobile: 30, tablet: 40 }}
+                        lineHeight={"normal"}
+                        color={"#FFFFFF"}
+                        overflow={{ mobile: "visible" }}
+                        sx={{
+                            [theme.breakpoints.down(125)]: {
+                                overflow: "hidden"
+                            }
+                        }}
+                    >
+                        About
+                    </Typography>
+                </Box>
                 <Typography
                     variant="body1"
                     fontFamily={"Helvetica Neue"}
@@ -40,10 +54,10 @@ export const About: React.FC<{}> = () => {
                     color={"#FFFFFF"}
                     whiteSpace={"normal"}
                 >
-                    We at Shiko LZ Subsea are specialist of innovative instruments, services and solutions for measurement, monitoring and communication underwater.
+                    We at Shiko LZ Subsea are specialists of innovative instruments, services and solutions for measurement, monitoring and communication underwater.
                     We provide solutions for all water environments, including offshore structures and pipelines, oceans, estuaries, rivers and marine. <br /><span style={{ display: "block", height: "2rem" }}></span>
 
-                    We work with the best industry design equipment to withstand deep-water environments, extreme sea withstand deep-water environments, extreme sea states and heavy-duty loading. <br /><span style={{ display: "block", height: "2rem" }}></span>
+                    We work with the best industry design equipment to withstand deep-water environments, extreme sea states and heavy-duty loading. <br /><span style={{ display: "block", height: "2rem" }}></span>
 
                     We carry out engineering in line with the most stringent maritime and industrial standards to ensure continuous safe and reliable operation. <br /><span style={{ display: "block", height: "2rem" }}></span>
 

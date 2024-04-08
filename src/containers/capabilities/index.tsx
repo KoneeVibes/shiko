@@ -1,6 +1,7 @@
-import { Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardHeader, Grid, Typography } from "@mui/material";
 import { capabilities } from "../../data";
 import { CapabilitiesBox } from "./styled";
+import { theme } from "../../theme";
 
 export const Capabilities: React.FC<{}> = () => {
     return (
@@ -13,18 +14,34 @@ export const Capabilities: React.FC<{}> = () => {
                 borderRadius: "13px"
             }}
         >
-            <Typography
-                variant="h2"
-                fontFamily={"Helvetica Neue"}
-                fontWeight={700}
-                fontSize={{ mobile: 25, tablet: 40, laptop: 45, desktop: 50 }}
-                lineHeight={"normal"}
-                color={"#FFFFFF"}
+            <Box
+                maxWidth={{ mobile: 140, tablet: 218 }}
+                borderBottom={"4px solid #EDCD1F"}
+                sx={{
+                    [theme.breakpoints.down(250)]: {
+                        maxWidth: "unset",
+                    }
+                }}
                 marginBlockEnd={"2rem"}
-                whiteSpace={"normal"}
             >
-                Subsea Capabilities
-            </Typography>
+                <Typography
+                    variant="h2"
+                    fontFamily={"Helvetica Neue"}
+                    fontWeight={700}
+                    fontSize={{ mobile: 25, tablet: 40, laptop: 45, desktop: 50 }}
+                    lineHeight={"normal"}
+                    color={"#FFFFFF"}
+                    whiteSpace={{ mobile: "normal", miniTablet: "nowrap" }}
+                    overflow={{ mobile: "visible" }}
+                    sx={{
+                        [theme.breakpoints.down(250)]: {
+                            overflow: "hidden"
+                        }
+                    }}
+                >
+                    Subsea Capabilities
+                </Typography>
+            </Box>
             <Typography
                 variant="body1"
                 fontFamily={"Inter"}

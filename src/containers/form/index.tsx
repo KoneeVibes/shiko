@@ -1,8 +1,26 @@
-import { Card, CardContent, Stack, Typography } from "@mui/material";
+import React, { useRef } from "react";
+import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
 import { BaseForm } from "./styled";
 import { BaseButton } from "../../components/buttons";
+import emailjs from '@emailjs/browser';
 
 export const Form: React.FC<{}> = () => {
+    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+    const TEMP_ID = process.env.REACT_APP_TEMPLATE_ID;
+    const PUBLIC_KEY = process.env.REACT_APP_PUBLICKEY_ID;
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (!SERVICE_ID || !TEMP_ID || !PUBLIC_KEY || !form.current) return
+        emailjs.sendForm(SERVICE_ID, TEMP_ID, form.current, PUBLIC_KEY)
+            .then((result: any) => {
+                console.log(result.text);
+            }, (error: any) => {
+                console.log(error.text);
+            });
+        e.currentTarget.reset();
+    };
     return (
         <Stack
             direction={{ laptop: "row" }}
@@ -37,10 +55,10 @@ export const Form: React.FC<{}> = () => {
                     </Typography>
                     <Typography
                         variant="body1"
-                        fontFamily={"Inter"}
+                        fontFamily={"Montserrat"}
                         fontWeight={500}
                         fontSize={15}
-                        lineHeight={"normal"}
+                        lineHeight={1.87}
                         color={"#FFFFFF"}
                         whiteSpace={"normal"}
                     >
@@ -48,27 +66,35 @@ export const Form: React.FC<{}> = () => {
                     </Typography>
                 </CardContent>
             </Card>
-            <BaseForm>
+            <BaseForm ref={form} onSubmit={sendEmail}>
                 <input placeholder="Your Name" />
                 <input placeholder="Your email address" />
                 <input placeholder="Your Phone Number" />
                 <textarea placeholder='Send us an email' name='message' required></textarea>
-                <BaseButton
-                    submitformbutton="true"
-                    type="submit"
+                <Box
+                    overflow={"hidden"}
+                    marginLeft={{ miniTablet: "auto" }}
                 >
-                    <Typography
-                        variant="button"
-                        fontFamily={"inherit"}
-                        fontWeight={"inherit"}
-                        fontSize={"inherit"}
-                        lineHeight={"inherit"}
-                        color={"inherit"}
-                        textTransform={"inherit"}
+                    <BaseButton
+                        submitformbutton="true"
+                        type="submit"
+                        sx={{
+                            width: { mobile: "100%", miniTablet: "fit-content" }
+                        }}
                     >
-                        Submit
-                    </Typography>
-                </BaseButton>
+                        <Typography
+                            variant="button"
+                            fontFamily={"inherit"}
+                            fontWeight={"inherit"}
+                            fontSize={"inherit"}
+                            lineHeight={"inherit"}
+                            color={"inherit"}
+                            textTransform={"inherit"}
+                        >
+                            Submit
+                        </Typography>
+                    </BaseButton>
+                </Box>
             </BaseForm>
         </Stack>
     )

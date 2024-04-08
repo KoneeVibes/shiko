@@ -54,6 +54,7 @@ export const Growth: React.FC<{}> = () => {
                             <CountUp
                                 end={data[1]}
                                 enableScrollSpy={true}
+                                separator=""
                             >
                                 {({ countUpRef }) => (
                                     <Typography

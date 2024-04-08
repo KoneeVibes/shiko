@@ -18,6 +18,7 @@ function App() {
       maxWidth={false}
       sx={{
         padding: "0 !important",
+        overflow: "hidden"
       }}
     >
       <Header calendlyRef={calendlyRef} />
@@ -25,7 +26,7 @@ function App() {
       <About />
       <Growth />
       <Capabilities />
-      <Calendly calendlyRef={calendlyRef}/>
+      <Calendly calendlyRef={calendlyRef} />
       <Contact />
       <Form />
       <Footer />

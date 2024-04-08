@@ -1,7 +1,6 @@
 import { styled } from "@mui/material";
-import React from "react";
 
-export const BaseForm: React.FC<{ children: React.ReactNode }> = styled("form")(
+export const BaseForm = styled("form")(
     ({ theme }) => {
         return {
             display: "flex",
@@ -17,7 +16,7 @@ export const BaseForm: React.FC<{ children: React.ReactNode }> = styled("form")(
                 background: "#FFFFFF",
                 padding: "var(--cardPadding)",
                 outline: "none",
-                fontFamily: "Inter",
+                fontFamily: "Manrope",
                 fontWeight: "500",
                 fontSize: 16,
                 lineHeight: "normal",

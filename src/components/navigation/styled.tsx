@@ -31,8 +31,9 @@ export const Nav = styled("nav")(
                     top: "calc(60px + calc(2 * var(--sectionMargin)))",
                     width: "stretch",
                     height: "stretch",
-                    padding: "var(--cardPadding)",
+                    padding: "calc(2 * var(--cardPadding)) var(--cardPadding)",
                     background: "#F0F8FF",
+                    zIndex: 100,
                     "& li": {
                         textAlign: "center"
                     }

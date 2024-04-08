@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { BaseButton } from "../buttons";
 import { CalendlyRef } from "../../types/app.type";
+import { theme } from "../../theme";
 
 export const Hero: React.FC<CalendlyRef> = ({ calendlyRef }) => {
     return (
@@ -43,7 +44,10 @@ export const Hero: React.FC<CalendlyRef> = ({ calendlyRef }) => {
                 </Typography>
                 <BaseButton
                     sx={{
-                        width: { mobile: "100%", miniTablet: "fit-content" },
+                        width: { mobile: "fit-content" },
+                        [theme.breakpoints.down(216)]: {
+                            width: "100%"
+                        }
                     }}
                     onClick={() => calendlyRef?.current?.scrollIntoView({ behavior: "smooth" })}
                 >

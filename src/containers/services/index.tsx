@@ -1,10 +1,11 @@
-import { Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Stack, Typography } from "@mui/material";
 import { ServicesBox } from "./styled";
 import { services } from "../../data";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { theme } from "../../theme";
 
 export const Services: React.FC<{}> = () => {
     const matches = useMediaQuery('(min-width:1024px)');
@@ -12,19 +13,34 @@ export const Services: React.FC<{}> = () => {
         <ServicesBox
             id="services"
         >
-            <Typography
-                variant="h2"
-                fontFamily={"Helvetica Neue"}
-                fontWeight={700}
-                fontSize={{ mobile: 25, miniTablet: 30, tablet: 40, laptop: 45, desktop: 50 }}
-                lineHeight={"normal"}
-                color={"#01126E"}
-                sx={{
-                    textDecoration: "underline"
-                }}
-            >
-                Our Services
-            </Typography>
+            <Box>
+                <Box
+                    maxWidth={{ mobile: 111, tablet: 189 }}
+                    borderBottom={"4px solid #EDCD1F"}
+                    sx={{
+                        [theme.breakpoints.down(208)]: {
+                            maxWidth: "unset",
+                        }
+                    }}
+                >
+                    <Typography
+                        variant="h2"
+                        fontFamily={"Helvetica Neue"}
+                        fontWeight={700}
+                        fontSize={{ mobile: 25, miniTablet: 30, tablet: 40, laptop: 45, desktop: 50 }}
+                        lineHeight={"normal"}
+                        color={"#01126E"}
+                        overflow={{ mobile: "visible" }}
+                        sx={{
+                            [theme.breakpoints.down(208)]: {
+                                overflow: "hidden"
+                            }
+                        }}
+                    >
+                        Our Services
+                    </Typography>
+                </Box>
+            </Box>
             <Carousel
                 autoPlay={true}
                 stopOnHover={false}

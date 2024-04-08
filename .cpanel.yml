@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/albaytechnology/public_html/
+ - /bin/cp -R /home/albaytechnology/repositories/cheetahbot/build/* $DEPLOYPATH
+ 

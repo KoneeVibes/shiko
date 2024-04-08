@@ -5,7 +5,7 @@ export const BaseButton: React.FC<BaseButtonProps & Omit<ButtonProps, keyof Base
     ({ theme, submitformbutton }) => {
         const submitform = submitformbutton === "true";
         return {
-            fontFamily: submitform ? "Inter" : "Helvetica Neue",
+            fontFamily: submitform ? "Montserrat" : "Helvetica Neue",
             fontWeight: 500,
             fontSize: submitform ? 22 : 14,
             lineHeight: "normal",
