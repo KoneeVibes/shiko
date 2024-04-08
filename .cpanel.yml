@@ -2,5 +2,5 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/albaytechnology/public_html/slzltd.com
- - /bin/cp -R /home/albaytechnology/repositories/cheetahbot/build/* $DEPLOYPATH
+ - /bin/cp -R /home/albaytechnology/repositories/shiko/build/* $DEPLOYPATH
  
