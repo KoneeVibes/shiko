@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f18649bf.css",
+    "main.js": "/static/js/main.38f7a308.js",
+    "static/media/headerBg.svg": "/static/media/headerBg.4b853e6d875b7a19e190a56ec1331bfb.svg",
+    "static/media/headerMobile.svg": "/static/media/headerMobile.ff7a5bc40a0a39ddefb449dba4917460.svg",
+    "static/media/specialized.svg": "/static/media/specialized.7320e053634d08d445e5f4b5a764ccf6.svg",
+    "static/media/procurement.svg": "/static/media/procurement.a41c65d91defb120fde761c15578d63b.svg",
+    "static/media/about.svg": "/static/media/about.3f6d1ff71de2c6a9593861e271dbfeeb.svg",
+    "static/media/engineering.svg": "/static/media/engineering.4278dd3d770d309cd4661ec9b6a777e0.svg",
+    "static/media/Helvetica.ttf": "/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
+    "static/media/Helvetica-Bold.ttf": "/static/media/Helvetica-Bold.ed57aca7292971d8548c.ttf",
+    "static/media/logo.svg": "/static/media/logo.5ea0090b4d5bbb79229a9a7e4eb7c292.svg",
+    "static/media/PPTelegraf-Regular.otf": "/static/media/PPTelegraf-Regular.7a1d1a884ed6f9b965c1.otf",
+    "static/media/subsea.svg": "/static/media/subsea.6cc75bf0a889b5bb2e5c0ff87b8a2623.svg",
+    "static/media/instagram.svg": "/static/media/instagram.c75466dcacfdd810af8c2021d673c4c1.svg",
+    "static/media/architecture.svg": "/static/media/architecture.4d7e3e070299c9ab16c7952362213b2d.svg",
+    "static/media/equipment.svg": "/static/media/equipment.bac530dde87ba5521ee362999f1f6382.svg",
+    "static/media/construction.svg": "/static/media/construction.cf230c728b8cc8843159f55ac086016b.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.f969998d5071c629b8e75076373c0d5a.svg",
+    "index.html": "/index.html",
+    "static/media/facebook.svg": "/static/media/facebook.198267d9a466e1dba9246c4b2917776d.svg",
+    "static/media/pipelines.svg": "/static/media/pipelines.a69a93d57c4d628b0ab82b8433e5c260.svg",
+    "main.f18649bf.css.map": "/static/css/main.f18649bf.css.map",
+    "main.38f7a308.js.map": "/static/js/main.38f7a308.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f18649bf.css",
+    "static/js/main.38f7a308.js"
+  ]
+}
