@@ -8,6 +8,7 @@ export const CalendlyStack: React.FC<CalendlyStackType & Omit<StackProps, keyof 
                 minWidth: "0 !important",
                 borderRadius: "17px",
                 border: "1px solid #525252",
+                overflow: "hidden",
             },
             "& iframe": {
                 borderRadius: "17px",
