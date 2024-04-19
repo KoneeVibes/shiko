@@ -80,9 +80,9 @@ export const Calendly: React.FC<CalendlyRef> = ({ calendlyRef }) => {
                 <InlineWidget
                     url={URL}
                     pageSettings={{
-                        backgroundColor: 'none',
+                        backgroundColor: '#D6DCFF',
                         primaryColor: '#004FCA',
-                        textColor: '#FFFFFF'
+                        textColor: '#000000',
                     }}
                 />
             </Card>
